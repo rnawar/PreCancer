@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block content %}
+<div class="train-res-title">Congratulations, you can now download the predictions !</div>
+<div class="return">
+  <div class="btn-container">
+    <a href="{{ url_for('predict_using_model') }}">
+      <div class="btn btn3">Make New Prediction Again</div>
+    </a>
+    <a href="{{ url_for('download_new_results') }}">
+      <div class="btn btn3">Download Predicted Class Label</div>
+    </a>
+    <a href="{{ url_for('prediction') }}">
+      <div class="btn btn3">Train New Model</div>
+    </a>
+  </div>
+</div>
+
+{% endblock %}

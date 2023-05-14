@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block content %}
+<div class="res-title">Results:</div>
+<div class="main-res">
+  Accuracy <br /><span style="font-size: 80px">{{ data['accuracy'] }}%</span>
+</div>
+<div class="sub-res">
+  <div class="left-bottom">
+    <p>Sensitivity <br />{{ data['sensitivity'] }}</p>
+  </div>
+  <div class="middle-bottom">
+    <p>Specificity <br />{{ data['specificity'] }}</p>
+    </div></p>
+  <div class="right-bottom">
+    <p>AUC <br />{{ data['auc'] }}</p>
+  </div>
+</div>
+<div class="return">
+  <div class="btn-container">
+    <a href="{{ url_for('prediction') }}">
+      <div class="btn btn3">Predict Again</div>
+    </a>
+    <a href="{{ url_for('download_results') }}">
+      <div class="btn btn3">Download Preprocessed Dataset</div>
+    </a>
+    <a href="{{ url_for('predict_using_model') }}">
+      <div class="btn btn3">Predict Using Trained Model</div>
+    </a>
+  </div>
+</div>
+
+{% endblock %}

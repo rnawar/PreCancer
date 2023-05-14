@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% block content %}
+<div class="pred-page">
+  <div class="left-side">
+    <form
+      action="{{ url_for('result') }}"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <div class="input_title">Input Gene Expression</div>
+      <div class="drop-zone">
+        <span class="drop-zone-prompt">.CSV</span>
+        <input type="file" name="myfile" class="input-file" />
+        <div class="bx bx-upload" id="upload-icon"></div>
+      </div>
+      <div class="input_title">Input Target Column Name</div>
+      <div class="input_fields">
+        <input type="text" name="myTargetColumn" class="input-field" placeholder="e.g., Status" required/>
+
+      </div>
+      <div class="input_title">Input Number of Column to be selected during feature selection</div>
+      <div class="input_fields">
+        <input type="number" name="myNumberOfColumn" class="input-field"  placeholder="e.g., 100" min="1" required/>
+
+      </div>
+      <div class="error-message">
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for
+        message in messages %} {{ message }} {% endfor %} {% endif %} {% endwith
+        %}
+      </div>
+      <div class="place">
+        <button class="pred_buttons">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="right-side">
+    <p>
+      This colorectal cancer prediction uses gene expression via different
+      ensemble machine learning algorithms. Colorectal cancer is said to be one
+      of the deadliest cancer in the world today. To increase the survival rate
+      of the patients, proctologists can make use of this to be able to give
+      better treatments to the patients in much earlier stages of the cancer.
+    </p>
+  </div>
+</div>
+{% endblock %}

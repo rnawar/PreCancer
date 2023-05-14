@@ -1,0 +1,25 @@
+{% extends "layout.html" %} {% block content %}
+<section class="first">
+  <div class="title" id="title">Welcome to PreCancer</div>
+</section>
+<section class="center">
+  <h2>About Us</h2>
+  <p>
+    Precancer is a tool for predicting the probability of having cancer by the
+    use of gene expressions of an individual. Cancer is one of the leading
+    causes of death to humans, which contributes around 10 million fatalities
+    each year. In 2020, there were 29530 citizens in Malaysia who died due to
+    cancer. Moreover, more than half of cancer patients are diagnosed late and
+    end up in Stage 3 or 4 when it is detected. As a result, the probability of
+    surviving and having a successful treatment is one in a million. As a
+    consequence, the development of molecular biomarker lab tests provides a
+    viable alternative for a rapid, non-invasive, and accurate early cancer
+    detection.
+  </p>
+  <div class="place">
+    <a href="{{ url_for('prediction') }}">
+      <div class="btn btn3">Lets Get Started</div>
+    </a>
+  </div>
+</section>
+{% endblock %}

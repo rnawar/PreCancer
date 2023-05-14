@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% block content %}
+<div class="pred-page">
+    <div class="left-side">
+        <form
+          action="{{ url_for('trained_model_result') }}"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="input_title">Prediction Using Trained Model</div>
+          <div class="drop-zone">
+            <span class="drop-zone-prompt">.CSV</span>
+            <input type="file" name="myfile" class="input-file" />
+            <div class="bx bx-upload" id="upload-icon"></div>
+          </div>
+          <div class="error-message">
+            {% with messages = get_flashed_messages() %} {% if messages %} {% for
+            message in messages %} {{ message }} {% endfor %} {% endif %} {% endwith
+            %}
+          </div>
+          <div class="place">
+            <button class="pred_buttons">Submit</button>
+          </div>
+        </form>
+      </div>
+    <div class="right-side">
+    <p>
+      Congratulations, you've successfully trained an ensemble machine learning model using bagging
+        algorithm with your own dataset! Now, you can use this model to make predictions on new, unseen
+        data. Simply upload a CSV file containing your data without class label, and our model will predict
+        the class label for each instance. You can download the predictions as a CSV file for further analysis.
+    </p>
+  </div>
+</div>
+{% endblock %}

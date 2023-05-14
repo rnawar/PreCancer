@@ -1,0 +1,15 @@
+<header>
+  <label class="logo">PreCancer</label>
+  <ul class="navbar">
+    <a href="{{ url_for('home') }}" class="{% if home %}active{% endif %}"
+      >Home</a
+    >
+    <a
+      href="{{ url_for('prediction') }}"
+      class="{% if prediction %}active{% endif %}"
+      >Prediction</a
+    >
+    <a href="{{ url_for('faq') }}" class="{% if faq %}active{% endif %}">FAQ</a>
+  </ul>
+  <div class="bx bx-menu" id="menu-icon"></div>
+</header>
