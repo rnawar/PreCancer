@@ -47,6 +47,8 @@ class Bagging:
         if has_nan > 0:
             # replace missing values with mean
             self.data.fillna(self.data.mean(numeric_only=True).round(1), inplace=True)
+        else:
+            return
 
     def preprocess_data(self):
         print("Now running preprocess_data function")
@@ -84,7 +86,7 @@ class Bagging:
                 elif model == 'XGBoost':
                     base_model = xgb.XGBClassifier(random_state=i)
                 else:
-                    raise ValueError('Invalid base model')
+                    print("Warning: Invalid base model '{}'".format(model))
                 # perform LOOCV to train the model
                 loocv = LeaveOneOut()
                 for train_index, test_index in loocv.split(X_train_bag):
@@ -154,7 +156,7 @@ class Bagging:
 
         # Train bagging model
         self.base_models = ['SVC', 'NaiveBayes', 'RandomForest', 'XGBoost']
-        self.n_models = 3
+        self.n_models = 1
         self.bagging()
 
         # Evaluate bagging model

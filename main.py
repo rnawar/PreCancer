@@ -5,13 +5,13 @@ from model import *
 
 ALLOWED_EXTENSIONS = {'csv'}
 
-
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 app = Flask(__name__)
+app.secret_key = 'Hello World'
 
 my_bagging = Bagging()
 
@@ -59,7 +59,7 @@ def result():
             if number_of_column <= 0:
                 flash('Please enter a valid number of columns greater than 0.', 'error')
                 return redirect(request.url)
-            elif number_of_column > len(res.columns) - 2:  # - 2 since we need to exclude the first and last column
+            elif number_of_column > len(res.columns) - 2:  # - 2 since we need to exclude the id and target column
                 flash('The number of columns cannot be greater than the number of columns in the dataset.', 'error')
                 return redirect(request.url)
             result = my_bagging.algorithm(res, target_col_name, number_of_column)
