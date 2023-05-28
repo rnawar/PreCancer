@@ -1,3 +1,71 @@
 {% extends "layout.html" %} {% block content %}
-<div class="faq">To Be Continue</div>
+<div class="faq">
+  <div class="ques">1) What is colorectal cancer prediction?</div>
+  <div class="ans">
+    Colorectal cancer prediction refers to the process of using a predictive
+    model to assess the likelihood of an individual having colorectal cancer
+    based on certain input data, such as gene expression datasets.
+  </div>
+  <div class="ques">
+    2) How accurate is the colorectal cancer prediction on your website?
+  </div>
+  <div class="ans">
+    The accuracy of the colorectal cancer prediction on our website depends on
+    the performance of the underlying predictive model. Our model has been
+    trained on a large dataset and has shown promising results in previous
+    evaluations. However, it's important to note that no prediction model is
+    100% accurate, and individual results may vary.
+  </div>
+  <div div class="ques">
+    3) What input data is required for cancer prediction?
+  </div>
+  <div class="ans">
+    To perform cancer prediction on our website, you need to provide a gene
+    expression dataset. This dataset should contain relevant information about
+    gene expressions. The first row should be the headers and the first column
+    should be the ID of the specimen. You will specify the target column name,
+    which represents the class label indicating the presence or absence of
+    cancer. Lastly, you can indicate the number of columns to be selected for
+    the feature selection process.
+  </div>
+  <div div class="ques">
+    4) Can I use my own dataset for colorectal cancer prediction?
+  </div>
+  <div class="ans">
+    Absolutely! Our website allows you to train a new model using your own
+    dataset. This feature enables customization and adaptation of the predictive
+    model to your specific requirements.
+  </div>
+  <div div class="ques">
+    5) How can I assess the performance of the predictive model?
+  </div>
+  <div class="ans">
+    Once you submit the data and the backend code finishes executing, you will
+    be presented with performance metrics of the model. These metrics include
+    measures like accuracy, sensitivity, specificity, and AUC, which provide
+    insights into the model's performance in predicting colorectal cancer.
+  </div>
+  <div div class="ques">
+    6) Can I download the preprocessed dataset used during model training?
+  </div>
+  <div class="ans">
+    Yes, you can! We promote transparency and reproducibility by allowing users
+    to download the preprocessed dataset used during the model training process.
+    This enables you to review the data and understand how the model was
+    trained.
+  </div>
+  <div div class="ques">7) What can I do with the predicted results?</div>
+  <div class="ans">
+    Once the prediction is generated, you have several options. You can download
+    the predicted class labels for your dataset, which can be useful for further
+    analysi. You can also choose to predict new data again or even decide to
+    train a new model based on your specific requirements.
+  </div>
+  <div div class="ques">8) Is my data secure and private?</div>
+  <div class="ans">
+    We take data security and privacy seriously. All data you provide is handled
+    with strict confidentiality and is used solely for the purpose of generating
+    predictions. We do not share your data with any third parties.
+  </div>
+</div>
 {% endblock %}

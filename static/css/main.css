@@ -368,11 +368,21 @@ header {
 
 .faq {
   height: fit-content;
-  top: 100%;
+  top: 10%;
   position: relative;
-  display: flex;
-  font-size: 100px;
+  /* display: flex; */
+  font-size: 20px;
   float: left;
+}
+
+.ques {
+  padding-bottom: 5px;
+  color: var(--text);
+}
+
+.ans {
+  padding-bottom: 25px;
+  color: var(--text);
 }
 
 .return a {
@@ -380,16 +390,16 @@ header {
 }
 
 .input_fields {
-    padding: 15px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    width: 40vw;
-    height: 40px;
-    cursor: pointer;
-    color: #cccccc;
-    border: #000 solid 2px;
-    border-radius: 5px;
-    margin-bottom: 5%;
-    justify-content: flex-start;
-}5
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  width: 40vw;
+  height: 40px;
+  cursor: pointer;
+  color: #cccccc;
+  border: #000 solid 2px;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  justify-content: flex-start;
+}
